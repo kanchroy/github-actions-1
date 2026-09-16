@@ -16,6 +16,6 @@ jobs:
 
         - name: list and display files
           run: |
-            ls -al
-            cat README.md
+            chmod +x script.sh
+            ./script.sh
 
