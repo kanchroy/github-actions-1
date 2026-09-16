@@ -1,0 +1,14 @@
+name: first-action
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu:latest
+
+        steps:
+        - name: list files
+          run: ls -al
+
+        - name: Display Content
+          run: cat README.md
