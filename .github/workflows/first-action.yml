@@ -17,6 +17,12 @@ jobs:
         - name: Create file
           run: echo "This is my github actions training file" >> actions.txt
 
+        - name: Git Push
+          run: |
+            git add .
+            git commit -m "adding text file"
+            git push origin main
+
     Test_file:
         needs: Create_file
         runs-on: ubuntu-latest
