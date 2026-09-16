@@ -14,8 +14,8 @@ jobs:
           uses: actions/checkout@v6
 
 
-        - name: list files
-          run: ls -al
+        - name: list and display files
+          run: |
+            ls -al
+            cat README.md
 
-        - name: Display Content
-          run: cat README.md
