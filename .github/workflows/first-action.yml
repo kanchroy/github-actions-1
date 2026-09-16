@@ -1,6 +1,9 @@
 name: first-action
 
-on: push
+on: 
+   push:
+    branches:
+        - main
 
 jobs:
     first_job:
