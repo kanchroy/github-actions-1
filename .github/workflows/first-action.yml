@@ -16,6 +16,8 @@ jobs:
 
         - name: Create file
           run: echo "This is my github actions training file" >> actions.txt
+
+        - name: upload-artifact  
           uses: actions/upload-artifact@v7
           with:
             name: actions-textfile
