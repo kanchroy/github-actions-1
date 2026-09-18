@@ -22,7 +22,6 @@ jobs:
           with:
             name: actions-textfile
             path: actions.txt
-            archive: false
 
     Test_file:
         needs: Create_file
