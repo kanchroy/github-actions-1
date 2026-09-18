@@ -50,5 +50,5 @@ jobs:
           run: echo Deploying...
 
         - name: Check file
-          run: grep -i actions-textfile.zip
+          run: grep -i 'training' actions.txt
 
