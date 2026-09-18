@@ -51,5 +51,5 @@ jobs:
           run: echo Deploying...
 
         - name: Check file
-          run: grep -i actions.txt
+          run: grep -i actions-textfile.zip
 
