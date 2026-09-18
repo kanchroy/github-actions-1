@@ -16,20 +16,20 @@ jobs:
 
         - name: Create file
           run: echo "This is my github actions training file" >> actions.txt
-
-        - name: Git Push
-          run: |
-            git add .
-            git commit -m "adding text file"
-            git push origin main
+          uses: actions/upload-artifact@v7
+          with:
+            name: actions-textfile
+            path: actions.txt
 
     Test_file:
         needs: Create_file
         runs-on: ubuntu-latest
 
         steps:
-        - name: Check out Repo
-          uses: actions/checkout@v6
+        - name: Download artifact
+          uses: actions/download-artifact@v8          
+          with:
+            name: actions-textfile
 
         - name: display content
           run: cat actions.txt
@@ -39,8 +39,10 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: Check out Repo
-          uses: actions/checkout@v6
+        - name: Download artifact
+          uses: actions/download-artifact@v8          
+          with:
+            name: actions-textfile
 
         - name: Deploy
           run: echo Deploying...
